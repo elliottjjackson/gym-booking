@@ -1,4 +1,4 @@
-import os
+import os, datetime
 #from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.firefox.options import Options
 ### Time loggin script for when this script is run
@@ -31,8 +31,38 @@ goodLifeWebsite = 'https://member.clubware.com.au/GoodlifeMountlawley/timetable'
 print('Start')
 dateTimeRecord()
 
-runBooking(goodLifeWebsite,EJ.username,EJ.password,6,'11:30 AM',1)
-#runBooking(goodLifeWebsite,Jas.username,Jas.password,2,'5:30 PM',1)
+day = datetime.datetime.today().weekday()
+
+Monday = 0
+if day == Monday + 1:
+    runBooking(goodLifeWebsite,Jas.username,Jas.password,Monday,'5:30 PM',1)
+
+Tuesday = 1
+if day == Tuesday + 1:
+    runBooking(goodLifeWebsite,Jas.username,Jas.password,Tuesday,'4:45 PM',1)
+
+Wednesday = 2
+if day == Wednesday + 1:
+    pass
+
+Thursday = 3
+if day == Thursday + 1:
+    runBooking(goodLifeWebsite,Jas.username,Jas.password,Thursday,'5:30 PM',1)
+
+Friday = 4
+if day == Friday + 1:
+    runBooking(goodLifeWebsite,Jas.username,Jas.password,Friday,'4:45 PM',1)
+
+Saturday = 5
+if day == Saturday + 1:
+    runBooking(goodLifeWebsite,EJ.username,EJ.password,Monday,'4:45 PM',1)    
+
+Sunday = 6
+if day == Monday:
+    runBooking(goodLifeWebsite,Jas.username,Jas.password,Sunday,'10:30 AM',1)
+    runBooking(goodLifeWebsite,Jas.username,Jas.password,Sunday,'11:30 AM',1)
+    runBooking(goodLifeWebsite,EJ.username,EJ.password,Sunday,'10:30 AM',1)    
+
 
 print('Finish')
 dateTimeRecord()

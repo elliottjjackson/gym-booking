@@ -1,1 +1,1 @@
-"C:\Users\Ejay0\AppData\Local\Programs\Python\Python38\python.exe" "D:\my-documents\code\python\gym-booking\gym-booking.py"
+"C:\Users\Ejay0\AppData\Local\Programs\Python\Python38\python.exe" "D:\my-documents\code\python\gym-booking\main.py"
