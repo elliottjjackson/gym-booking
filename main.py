@@ -1,13 +1,8 @@
 import os, datetime
-#from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.firefox.options import Options
 ### Time loggin script for when this script is run
 from dateTimeRecord import dateTimeRecord
 ### Script that automates the gym website booking process using Selenium
 from runBooking import runBooking
-
-options = Options()
-options.headless = True
 
 class User:
     def __init__(self, name, username, password):

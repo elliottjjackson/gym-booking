@@ -30,6 +30,7 @@ def runBooking(website, username, password,dayClass,classTime,classNum):
 
     #browser = webdriver.Chrome(executable_path=r'C:/Users/Ejay0/AppData/Local/Programs/Python/Python38/chromedriver.exe', options=chromeOptions)
     options = Options()
+    options.headless = True
     browser = webdriver.Firefox(options=options)
     browser.maximize_window()
     browser.get(website)
