@@ -50,7 +50,7 @@ if day == Friday + 1:
 
 Saturday = 5
 if day == Saturday + 1:
-    runBooking(goodLifeWebsite,EJ.username,EJ.password,Monday,'4:45 PM',1)    
+    pass
 
 Sunday = 6
 if day == Monday:
