@@ -56,7 +56,7 @@ Sunday = 6
 if day == Monday:
     runBooking(goodLifeWebsite,Jas.username,Jas.password,Sunday,'10:30 AM',1)
     runBooking(goodLifeWebsite,Jas.username,Jas.password,Sunday,'11:30 AM',1)
-    runBooking(goodLifeWebsite,EJ.username,EJ.password,Sunday,'10:30 AM',1)    
+    runBooking(goodLifeWebsite,EJ.username,EJ.password,Sunday,'11:30 AM',1)    
 
 
 print('Finish')
