@@ -11,12 +11,12 @@ class User:
         self.password = password
 
 #Map os environment variables to py script variables
-EJName = str(os.getenv('EJName'))
-EJGLUser = str(os.getenv('EJEmail'))
+EJName = str(os.getenv('EJNAME'))
+EJGLUser = str(os.getenv('EJEMAIL'))
 EJGLPW = str(os.getenv('EJGLPW'))
-JasName = str(os.getenv('JasName'))
-JasGLUser = str(os.getenv('JasEmail'))
-JasGLPW = str(os.getenv('JasGLPW'))
+JasName = str(os.getenv('JASNAME'))
+JasGLUser = str(os.getenv('JASEMAIL'))
+JasGLPW = str(os.getenv('JASGLPW'))
 
 #Set up a class with the website username and website password.
 EJ = User(EJName,EJGLUser,EJGLPW)
