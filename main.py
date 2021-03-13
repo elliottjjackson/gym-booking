@@ -4,6 +4,8 @@ from dateTimeRecord import dateTimeRecord
 ### Script that automates the gym website booking process using Selenium
 from runBooking import runBooking
 
+#Test os.pathsep
+
 class User:
     def __init__(self, name, username, password):
         self.name = name
@@ -50,7 +52,7 @@ if day == Friday + 1:
 
 Saturday = 5
 if day == Saturday + 1:
-    pass
+    runBooking(goodLifeWebsite,EJ.username,EJ.password,Friday,'9:15 PM',1) 
 
 Sunday = 6
 if day == Monday:

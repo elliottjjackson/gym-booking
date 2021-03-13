@@ -8,13 +8,15 @@ def runBooking(website, username, password,dayClass,classTime,classNum):
     ### selenium - required for website interfacing
     ### random - to generate lag between inputs to mimic a real user
     ### selenium.common.exceptions - error catches when the gym timetable changes
+    ### platform - differentiate between linux and windwos
     import webbrowser, sys, bs4, requests, time, datetime, os,sys
     from selenium import webdriver
     from random import random
     from selenium.common.exceptions import ElementNotInteractableException
     from selenium.common.exceptions import NoSuchElementException
-    #from selenium.webdriver.chrome.options import Options
+    from selenium.webdriver.chrome.options import Options
     from selenium.webdriver.firefox.options import Options
+    import platform
     ### website html parse script
     from htmlTableSearch import htmlTableSearch
 
@@ -28,12 +30,19 @@ def runBooking(website, username, password,dayClass,classTime,classNum):
     else:
         tableColumn = str(8-(day-dayClass))
 
-    #browser = webdriver.Chrome(executable_path=r'C:/Users/Ejay0/AppData/Local/Programs/Python/Python38/chromedriver.exe', options=chromeOptions)
     options = Options()
     options.headless = True
-    browser = webdriver.Firefox(options=options)
-    browser.maximize_window()
+    
+    osName = platform.system()
+    if osName == "Linux":
+        options.binary_location='/usr/lib/chromium-browser/chromium-browser'
+        browser = webdriver.Chrome(executable_path=r'/usr/lib/chromium-browser/chromedriver')
+    else:
+        browser = webdriver.Firefox ('/usr/local/bin/geckodriver', options=options)
+        browser = webdriver.Firefox(options=options)
+
     browser.get(website)
+    browser.maximize_window()
 
     #time delay required for humanisation
     time.sleep(random()*3)
