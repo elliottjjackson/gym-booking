@@ -38,7 +38,6 @@ def runBooking(website, username, password,dayClass,classTime,classNum):
         options.binary_location='/usr/lib/chromium-browser/chromium-browser'
         browser = webdriver.Chrome(executable_path=r'/usr/lib/chromium-browser/chromedriver')
     else:
-        browser = webdriver.Firefox ('/usr/local/bin/geckodriver', options=options)
         browser = webdriver.Firefox(options=options)
 
     browser.get(website)
