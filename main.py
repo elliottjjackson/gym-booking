@@ -36,7 +36,7 @@ if day == Monday + 1:
 
 Tuesday = 1
 if day == Tuesday + 1:
-    runBooking(goodLifeWebsite,Jas.username,Jas.password,Tuesday,'4:45 PM',1)
+    runBooking(goodLifeWebsite,Jas.username,Jas.password,Tuesday,'5:30 PM',1)
 
 Wednesday = 2
 if day == Wednesday + 1:
